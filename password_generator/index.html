@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Link-->
+    <link rel="stylesheet" href="./style2.css" />
+
+    <!--Bootstrap Link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <title>Random Password Generator</title>
+  </head>
+  <body>
+      <div class="main_div">
+        <div class="card card1">
+          <div class="card-body card_body_1">
+            <h5 class="card-title">Random Password Generator</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              Generate Unique & Strong Password
+            </h6>
+            <div id="slider_div">
+              <label>Password length: <span id="sliderValue">8</span></label>
+              <input
+                type="range"
+                class="form-range"
+                min="4"
+                max="20"
+                value="8"
+                id="length"
+              />
+            </div>
+            <div class="checkboxes">
+              <div class="first_col">
+                <label>
+                  <input
+                    class="checkbox_input"
+                    type="checkbox"
+                    name="uppercase"
+                    id="uppercase"
+                    checked
+                  />
+                  ABC</label
+                >
+                <label>
+                  <input
+                    class="checkbox_input"
+                    type="checkbox"
+                    name="lowercase"
+                    id="lowercase"
+                    checked
+                  />
+                  abc</label
+                >
+              </div>
+              <div class="second_col">
+                <label>
+                  <input
+                    class="checkbox_input"
+                    type="checkbox"
+                    name="numbers"
+                    id="numbers"
+                    checked
+                  />
+                  123</label
+                >
+                <label>
+                  <input
+                    class="checkbox_input"
+                    type="checkbox"
+                    name="symbols"
+                    id="symbols"
+                    checked
+                  />
+                  $*!</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec_col_main">
+          <div class="card card2">
+            <div class="card-body card_body_2">
+              <h5 class="card-title">PASSWORD</h5>
+              <input
+                class="password_input"
+                type="text"
+                name="password"
+                id="password"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="card card3">
+            <div class="card-body card_body_3">
+              <h5 class="card-title">Copy & Re-Generate</h5>
+              <div class="btns">
+                <button id="copy_btn" onclick="copyPassword()">
+                   <img
+                    src="./assets/copy.png"
+                    alt="Copy icon"
+                    width="50"
+                    height="50"
+                  />
+                </button>
+                <button id="re_gen_btn" onclick="generatePassword()">
+                  <img
+                    src="./assets/refreshing.png"
+                    alt="Re-generate icon"
+                    width="50"
+                    height="50"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Scripts-->
+    <!--JS Script-->
+    <script src="./script.js"></script>
+
+    <!--Bootstrap Script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Poppers Script-->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous" 
+    ></script>-->
+  </body>
+</html>
